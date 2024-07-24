@@ -1,0 +1,4 @@
+-IC:\Users\ayash\Documents\ThirdWorkspace\AccountsProject2
+-std=c++11
+-target
+
