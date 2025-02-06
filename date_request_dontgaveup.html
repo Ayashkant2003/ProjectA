@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Request</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #fce4ec;
+        }
+        .container {
+            padding: 20px;
+            border-radius: 10px;
+            background: white;
+            display: inline-block;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .emoji {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        .yes {
+            background-color: #4caf50;
+            color: white;
+        }
+        .no {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="emoji">🥺👉👈</div>
+        <h2 id="question">Will you go on a date with me? 😊💕</h2>
+        <button class="btn yes" onclick="yesClicked()">Yes</button>
+        <button class="btn no" onclick="noClicked()">No</button>
+    </div>
+
+    <script>
+        let messages = [
+            "Are you sure? 🥺",
+            "Please go out with me? 🙏",
+            "I will be so happy if you say yes! 😊",
+            "Pretty please? 🥺👉👈",
+            "Don't break my heart 💔",
+            "I won't stop asking until you say yes! 😆",
+            "Just one date? 🥰",
+            "Say yes, and I'll be the happiest person ever! 🥳",
+            "Okay, now you're just testing my patience... 😤",
+            "C'mon, just say YES already! 😜"
+        ];
+        let index = 0;
+
+        function yesClicked() {
+            document.querySelector(".container").innerHTML = "<h2>Yay! 🎉 Can't wait for our date! ❤️🥰</h2>";
+        }
+
+        function noClicked() {
+            document.getElementById("question").innerText = messages[index];
+            index = (index + 1) % messages.length; // Loop back to the first message after the last one
+        }
+    </script>
+</body>
+</html>
